@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "jacoco"
+    id "org.sonarqube" version "2.7"
+}
+
+//systemProp.sonar.host.url=http://localhost:9000
+//systemProp.sonar.login=439cf158b47b39d77d89af133630ad1b39d05cbc
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+}
+
+test {
+    useJUnitPlatform()
+}
