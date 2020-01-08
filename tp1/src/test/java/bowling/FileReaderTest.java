@@ -8,7 +8,7 @@ class FileReaderTest {
 
     @Test
     void should_read_file_content() {
-        String fileContent = FileReader.readClassPathResourceFileContent("score2.csv");
+        String fileContent = FileReader.readClassPathResourceFileContent("score1.csv");
 
         assertNotNull(fileContent);
     }
@@ -20,7 +20,7 @@ class FileReaderTest {
                 FileReader.readClassPathResourceFileContent("not_exist")
         );
 
-        assertEquals("File doesn't exist", exception.getMessage());
+        assertEquals("Unable to read file", exception.getMessage());
     }
 
 }

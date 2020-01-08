@@ -10,20 +10,12 @@ import java.util.Objects;
 public class FileReader {
 
     public static String readClassPathResourceFileContent(String path) {
-        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-        URL resource = classLoader.getResource(path);
-
-        if (Objects.isNull(resource)) {
-            throw new RuntimeException("File doesn't exist");
-        }
-
-        File file = new File(resource.getFile());
+        File file = new File(path);
 
         try {
             return new String(Files.readAllBytes(file.toPath()));
         } catch (IOException e) {
             throw new RuntimeException("Unable to read file");
         }
-
     }
 }
