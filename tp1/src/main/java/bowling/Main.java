@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         /* FIRST GAME */
         List<Integer> firstGameRolls = getFirstGameRolls();
         // Should print 133
