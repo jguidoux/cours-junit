@@ -1,0 +1,20 @@
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'jacoco'
+}
+
+subprojects {
+
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		testCompile "org.junit.jupiter:junit-jupiter:5.5.2"
+		testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+}

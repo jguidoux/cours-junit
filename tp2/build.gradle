@@ -1,16 +1,16 @@
-buildscript {
-    repositories { mavenCentral() }
-}
+//buildscript {
+//    repositories { mavenCentral() }
+//}
 
 plugins {
-    id 'java'
+//    id 'java'
     id 'org.springframework.boot' version '2.0.5.RELEASE'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
 }
-
-repositories {
-    mavenCentral()
-}
+//
+//repositories {
+//    mavenCentral()
+//}
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
@@ -27,10 +27,10 @@ dependencies {
         exclude group: "org.mockito", module: "mockito-core"
     }
 
-    testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
-    testCompile("org.mockito:mockito-core:2.23.4")
+//    testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
+//    testCompile 'org.mockito:mockito-core:2.23.4'
 }
-
-test {
-    useJUnitPlatform()
-}
+//
+//test {
+//    useJUnitPlatform()
+//}

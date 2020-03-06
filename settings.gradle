@@ -1,5 +1,7 @@
-include 'fizzbuzz'
-include 'TripService'
-include 'treatString'
-include 'tp1'
-include 'tp2'
+rootProject.name = 'tp-junit5'
+
+include 'fizzbuzz',
+        'TripService',
+        'treatString',
+        'tp1',
+        'tp2'
