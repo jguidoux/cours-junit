@@ -4,7 +4,8 @@ import java.util.List;
 
 class Game {
 
-
+    final static int FRAME_NUMBER = 10;
+    final static int TEN_POINTS = 10;
     /**
      * score method is used to calculate a bowling score
      * @param rolls a list of int
@@ -15,25 +16,17 @@ class Game {
         int totalResult = 0;
         int index =0;
 
-        for(int i =0;i<10;i++){
 
-            /*if(i == 9 && rolls.get(index) == 10){
-                totalResult += 10 + rolls.get(index+1) + rolls.get(index+2);
-            }else if(i == 9 && rolls.get(index) + rolls.get(index+1) == 10){
-                totalResult += 10 + rolls.get(index+2);
-            }else if(i == 9){
-                totalResult += rolls.get(index) + rolls.get(index+1);
-            }*/
+        for(int frame =1; frame <= FRAME_NUMBER ; frame++){
 
-            //if(rolls.get(index) == 10 && i != 9){
-            if(rolls.get(index) == 10 ){
-                //strike
-                totalResult += 10 + rolls.get(index+1) + rolls.get(index+2);
+            if(isStrike(rolls, index) ){
+
+                totalResult += TEN_POINTS + rolls.get(index+1) + rolls.get(index+2);
                 index++;
             } else {
-                if(rolls.get(index) + rolls.get(index+1) == 10){
-                    //spare
-                    totalResult += 10 + rolls.get(index+2);
+                if(isSpare(rolls, index)){
+
+                    totalResult += TEN_POINTS + rolls.get(index+2);
                     index = index+2;
                 }else{
                     totalResult += rolls.get(index)+rolls.get(index+1);
@@ -42,5 +35,21 @@ class Game {
             }
         }
         return totalResult;
+    }
+
+    public static Boolean isSpare (List<Integer> rolls, int index) {
+        boolean Spare = false;
+        if(rolls.get(index) + rolls.get(index+1) == TEN_POINTS){
+            Spare = true;
+        }
+        return Spare;
+    }
+
+    public static Boolean isStrike (List<Integer> rolls, int index) {
+        boolean Strike = false;
+        if(rolls.get(index) == TEN_POINTS){
+            Strike = true;
+        }
+        return Strike;
     }
 }
