@@ -43,16 +43,16 @@ public class Main {
 
     private static List<Integer> getFirstGameRolls() {
         List<Integer> rolls = new ArrayList<>();
-        rolls.addAll(asList(1, 4));     // Frame 1
-        rolls.addAll(asList(4, 5));     // Frame 2
-        rolls.addAll(asList(6, 4));     // Frame 3  => 2 rolls spare
-        rolls.addAll(asList(5, 5));     // Frame 4  => 2 rolls spare
+        rolls.addAll(asList(7, 3));     // Frame 1
+        rolls.addAll(asList(10));     // Frame 2
+        rolls.addAll(asList(5, 5));     // Frame 3  => 2 rolls spare
+        rolls.addAll(asList(7, 2));     // Frame 4  => 2 rolls spare
         rolls.add(10);                  // Frame 5  => 1 roll strike
-        rolls.addAll(asList(0, 1));     // Frame 6
+        rolls.add(10);     // Frame 6
         rolls.addAll(asList(7, 3));     // Frame 7  => 2 rolls spare
-        rolls.addAll(asList(6, 4));     // Frame 8  => 2 rolls spare
-        rolls.add(10);                  // Frame 9  => 1 roll strike
-        rolls.addAll(asList(2, 8, 6));  // Frame 10 => 3 rolls with 1 spare
+        rolls.addAll(asList(7, 2));     // Frame 8  => 2 rolls spare
+        rolls.addAll(asList(5, 3));                  // Frame 9  => 1 roll strike
+        rolls.addAll(asList(8, 2, 10));  // Frame 10 => 3 rolls with 1 spare
         return rolls;
     }
 }
