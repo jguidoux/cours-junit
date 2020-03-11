@@ -4,7 +4,7 @@ import java.util.List;
 
 class Game {
 
-    final static int FRAME_NUMBER = 10;
+    final static int TOTAL_FRAMES_NUMBER = 10;
     final static int TEN_POINTS = 10;
     /**
      * score method is used to calculate a bowling score
@@ -17,9 +17,9 @@ class Game {
         int index =0;
 
 
-        for(int frame =1; frame <= FRAME_NUMBER ; frame++){
+        for(int frame =1; frame <= TOTAL_FRAMES_NUMBER ; frame++){
 
-            if(isStrike(rolls, index) ){
+            if(isStrike(rolls, index)){
 
                 totalResult += TEN_POINTS + rolls.get(index+1) + rolls.get(index+2);
                 index++;
